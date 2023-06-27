@@ -111,6 +111,33 @@ button:hover {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.product_label {
+  position: relative;
+  overflow: hidden;
+}
+
+.label_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: Roboto;
+  line-height: 28px;
+  letter-spacing: 1.55;
+  padding: 0px 24px 0px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+}
+.product_item:hover .label_overlay {
+  transform: translateY(0);
+}
+
 .product_img {
   width: 100%;
 }
