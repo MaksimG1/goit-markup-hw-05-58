@@ -160,8 +160,19 @@ header {
   margin-right: 0;
 }
 .mail_header {
+  display: inline-block;
+}
+.mail_name {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.email_nav {
+  display: inline-block;
+}
+.mail_name:focus .mail_svg {
+  fill: #188ce8;
 }
 
 .mail_svg {
@@ -176,22 +187,25 @@ header {
   fill: var(--secondary-color);
 }
 
-.mail_header:hover .mail_name,
-.mail_header:focus .mail_name {
-  color: var(--secondary-color);
-}
-
-.pencil:focus .mail_svg {
-  fill: var(--secondary-color);
-}
-
-.pencil:focus .phone_svg {
-  fill: var(--secondary-color);
-}
 .mailnnumb_item {
+  display: inline-block;
+}
+.mail_name {
   margin-left: 40px;
   display: flex;
   justify-content: center;
+}
+.phone_svg {
+  fill: var(--paragraph-color);
+  width: 10px;
+  height: 16px;
+}
+.number_nav {
+  margin-left: 10px;
+}
+
+.mail_name:focus .phone_svg {
+  fill: var(--secondary-color);
 }
 
 .mailnnumb_item:hover .phone_svg,
@@ -204,12 +218,6 @@ header {
 .mailnnumb_item:focus .phone_item {
   color: var(--secondary-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.phone_svg {
-  fill: var(--paragraph-color);
-  width: 10px;
-  height: 16px;
 }
 
 .phone_item {
@@ -267,7 +275,6 @@ header {
 }
 .btn_flex {
   display: flex;
-  /* position: relative; */
 }
 .btn:hover {
   background-color: #188ce8;
@@ -498,6 +505,10 @@ header {
 }
 
 .clients_item {
+  display: inline-block;
+}
+
+.client_link {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 170px;
@@ -506,7 +517,6 @@ header {
   justify-content: center;
   align-items: center;
   margin-left: 30px;
-  cursor: pointer;
 }
 .clients_item:hover {
   border: 1px solid var(--secondary-color);
@@ -516,13 +526,15 @@ header {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client_svg_use {
-}
 .clients_item:hover .client_svg {
   fill: var(--secondary-color);
+}
+.client_link:focus .client_svg {
+  fill: var(--secondary-color);
+  border-color: red;
 }
 
 /* FOOTER============================================================================================================================================== */
