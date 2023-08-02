@@ -58,18 +58,18 @@ body {
   display: flex;
   justify-content: center;
 }
-.project_items > button {
+.project_items > a {
   margin-right: 8px;
   cursor: pointer;
 }
 
-button.curent {
+.curent {
   background-color: var(--secondary-color);
   color: var(--just-white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-button {
+.port_btn {
   font-weight: 500;
   font-size: 500px;
   font-size: 16px;
@@ -80,10 +80,12 @@ button {
   padding: 6px 22px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:hover {
+.port_btn:focus,
+.port_btn:hover {
   background-color: var(--secondary-color);
   color: var(--just-white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 /* PRODUCTS ---------============----------------===============-------------------===============--------------=============---- */
@@ -134,7 +136,8 @@ button:hover {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
 }
-.product_item:hover .label_overlay {
+.product_item:hover .label_overlay,
+.product_item:focus .label_overlay {
   transform: translateY(0);
 }
 
